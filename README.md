@@ -25,5 +25,5 @@ Open:
 - Settings: http://localhost:5500/settings.html
 
 ## Admin Login
-- Default password: **admin123**
+- Default password: ****
 - You can change it in `localStorage` later (V2 can add UI to change password).
