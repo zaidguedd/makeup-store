@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Settings • GHAZAL ROSE</title>
+  <link rel="icon" href="images/favicon.ico" />
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/settings.css" />
+</head>
+<body>
+  <header class="settings-top">
+    <div class="settings-brand">
+      <img class="logo" src="images/logo.png" alt="logo"/>
+      <div>
+        <div class="brand-name">GHAZAL ROSE</div>
+        <div class="muted">Settings & Customization</div>
+      </div>
+    </div>
+    <div class="settings-actions">
+      <a class="btn btn-outline" href="index.html">Shop</a>
+      <a class="btn btn-outline" href="admin.html">Admin</a>
+    </div>
+  </header>
+
+  <main class="settings-container">
+    <div class="settings-grid">
+      <section class="card">
+        <h2>General</h2>
+        <div class="grid2">
+          <div>
+            <label class="label">Site / Brand Name</label>
+            <input id="sBrand" class="input" placeholder="GHAZAL ROSE" />
+          </div>
+          <div>
+            <label class="label">Tagline</label>
+            <input id="sTagline" class="input" placeholder="Soft Luxury Makeup" />
+          </div>
+          <div>
+            <label class="label">Email</label>
+            <input id="sEmail" class="input" placeholder="contact@email.com" />
+          </div>
+          <div>
+            <label class="label">Phone</label>
+            <input id="sPhone" class="input" placeholder="+212..." />
+          </div>
+          <div>
+            <label class="label">Default Language</label>
+            <select id="sLang" class="select">
+              <option value="en">EN</option>
+              <option value="fr">FR</option>
+              <option value="ar">AR</option>
+            </select>
+          </div>
+          <div>
+            <label class="label">Timezone</label>
+            <input id="sTZ" class="input" placeholder="Africa/Casablanca" />
+          </div>
+        </div>
+        <button id="saveGeneral" class="btn">Save General</button>
+      </section>
+
+      <section class="card">
+        <h2>WhatsApp</h2>
+        <div class="grid2">
+          <div>
+            <label class="label">WhatsApp Number (Morocco)</label>
+            <input id="waNumber" class="input" placeholder="2126XXXXXXX" />
+          </div>
+          <div>
+            <label class="label">Working Hours</label>
+            <input id="waHours" class="input" placeholder="09:00 - 22:00" />
+          </div>
+        </div>
+        <label class="label">Custom Message Template</label>
+        <textarea id="waTemplate" class="textarea" placeholder="Hello, I'd like to order: ..."></textarea>
+        <button id="saveWhatsApp" class="btn">Save WhatsApp</button>
+      </section>
+
+      <section class="card">
+        <h2>Theme</h2>
+        <div class="grid3">
+          <div>
+            <label class="label">Primary</label>
+            <input id="cPrimary" type="color" class="color" />
+          </div>
+          <div>
+            <label class="label">Secondary</label>
+            <input id="cSecondary" type="color" class="color" />
+          </div>
+          <div>
+            <label class="label">Background</label>
+            <input id="cBg" type="color" class="color" />
+          </div>
+          <div>
+            <label class="label">Text</label>
+            <input id="cText" type="color" class="color" />
+          </div>
+          <div>
+            <label class="label">Buttons</label>
+            <input id="cBtn" type="color" class="color" />
+          </div>
+          <div>
+            <label class="label">Hover</label>
+            <input id="cHover" type="color" class="color" />
+          </div>
+        </div>
+        <div class="row row-inline">
+          <button id="applyTheme" class="btn">Apply</button>
+          <button id="toggleMode" class="btn btn-outline">Toggle Dark/Light</button>
+          <button id="resetTheme" class="btn btn-outline">Reset</button>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Content</h2>
+        <label class="label">Hero Title</label>
+        <input id="heroTitleSet" class="input" />
+        <label class="label">Hero Description</label>
+        <textarea id="heroDescSet" class="textarea"></textarea>
+        <label class="label">About Us</label>
+        <textarea id="aboutSet" class="textarea"></textarea>
+        <button id="saveContent" class="btn">Save Content</button>
+      </section>
+
+      <section class="card">
+        <h2>Social Links</h2>
+        <div class="grid2">
+          <input id="ig" class="input" placeholder="Instagram URL" />
+          <input id="fb" class="input" placeholder="Facebook URL" />
+          <input id="tt" class="input" placeholder="TikTok URL" />
+          <input id="x" class="input" placeholder="X/Twitter URL" />
+          <input id="yt" class="input" placeholder="YouTube URL" />
+          <input id="li" class="input" placeholder="LinkedIn URL" />
+        </div>
+        <button id="saveSocial" class="btn">Save Social Links</button>
+      </section>
+
+      <section class="card">
+        <h2>Backup & Restore</h2>
+        <div class="row row-inline">
+          <button id="downloadBackup" class="btn btn-outline">Download Backup</button>
+          <input id="uploadBackup" class="input" type="file" accept="application/json" />
+        </div>
+        <div class="muted">Backup includes products, packs, categories, orders, reviews, settings, theme, content.</div>
+      </section>
+    </div>
+  </main>
+
+  <script type="module" src="js/settings-manager.js"></script>
+</body>
+</html>

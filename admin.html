@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Admin • GHAZAL ROSE</title>
+  <link rel="icon" href="images/favicon.ico" />
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/admin.css" />
+</head>
+<body>
+  <header class="admin-top">
+    <div class="admin-brand">
+      <img class="logo" src="images/logo.png" alt="logo"/>
+      <div>
+        <div class="brand-name">GHAZAL ROSE</div>
+        <div class="muted">Admin Dashboard</div>
+      </div>
+    </div>
+    <div class="admin-actions">
+      <a class="btn btn-outline" href="index.html">Shop</a>
+      <a class="btn btn-outline" href="settings.html">Settings</a>
+      <button id="logoutBtn" class="btn">Logout</button>
+    </div>
+  </header>
+
+  <main class="admin-container">
+    <div class="admin-grid">
+      <section class="panel card">
+        <div class="panel-head">
+          <h2>Branding</h2>
+          <p class="muted">Logo, banner, brand name.</p>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <label class="label">Brand name</label>
+            <input id="brandNameInput" class="input" placeholder="GHAZAL ROSE" />
+          </div>
+          <div class="row">
+            <label class="label">Tagline</label>
+            <input id="taglineInput" class="input" placeholder="Soft Luxury Makeup" />
+          </div>
+          <div class="row">
+            <label class="label">Upload Logo</label>
+            <input id="logoUpload" class="input" type="file" accept="image/*" />
+          </div>
+          <div class="row">
+            <label class="label">Upload Banner</label>
+            <input id="bannerUpload" class="input" type="file" accept="image/*" />
+          </div>
+          <button id="saveBranding" class="btn">Save branding</button>
+          <div class="hint muted">Changes appear instantly in the shop.</div>
+        </div>
+      </section>
+
+      <section class="panel card">
+        <div class="panel-head">
+          <h2>Categories</h2>
+          <p class="muted">Unlimited categories, filter in shop.</p>
+        </div>
+        <div class="panel-body">
+          <div class="row row-inline">
+            <input id="newCategoryName" class="input" placeholder="New category name" />
+            <button id="addCategoryBtn" class="btn">Add</button>
+          </div>
+          <div id="categoriesList" class="list"></div>
+        </div>
+      </section>
+
+      <section class="panel card">
+        <div class="panel-head">
+          <h2>Products</h2>
+          <p class="muted">Add, edit, delete products with images.</p>
+        </div>
+        <div class="panel-body">
+          <div class="form-grid">
+            <input id="pTitleEn" class="input" placeholder="Title (EN)" />
+            <input id="pTitleFr" class="input" placeholder="Title (FR)" />
+            <input id="pTitleAr" class="input" placeholder="Title (AR)" />
+            <input id="pPrice" class="input" type="number" placeholder="Price (MAD)" />
+            <select id="pCategory" class="select"></select>
+            <input id="pImage" class="input" type="file" accept="image/*" />
+            <button id="addProductBtn" class="btn">Add product</button>
+          </div>
+          <div id="productsList" class="list"></div>
+        </div>
+      </section>
+
+      <section class="panel card">
+        <div class="panel-head">
+          <h2>Packs</h2>
+          <p class="muted">Pack = multiple products + qty.</p>
+        </div>
+        <div class="panel-body">
+          <div class="form-grid">
+            <input id="packTitleEn" class="input" placeholder="Pack name (EN)" />
+            <input id="packTitleFr" class="input" placeholder="Pack name (FR)" />
+            <input id="packTitleAr" class="input" placeholder="Pack name (AR)" />
+            <input id="packPrice" class="input" type="number" placeholder="Price (MAD)" />
+            <input id="packImage" class="input" type="file" accept="image/*" />
+          </div>
+
+          <div class="pack-builder card">
+            <div class="pack-builder-head">
+              <strong>Pack Builder</strong>
+              <span class="muted">Select products and quantities</span>
+            </div>
+            <div id="packProductsPick" class="pick-list"></div>
+            <button id="createPackBtn" class="btn">Create pack</button>
+          </div>
+
+          <div id="packsList" class="list"></div>
+        </div>
+      </section>
+
+      <section class="panel card">
+        <div class="panel-head">
+          <h2>Orders Tracker</h2>
+          <p class="muted">Local history of WhatsApp orders.</p>
+        </div>
+        <div class="panel-body">
+          <div class="row row-inline">
+            <button id="exportOrdersBtn" class="btn btn-outline">Export JSON</button>
+            <button id="clearOrdersBtn" class="btn btn-outline">Clear</button>
+          </div>
+          <div id="ordersList" class="list"></div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <script type="module" src="js/admin.js"></script>
+</body>
+</html>

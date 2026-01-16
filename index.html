@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GHAZAL ROSE • Beauty Store</title>
+  <link rel="icon" href="images/favicon.ico" />
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/cart.css" />
+  <link rel="stylesheet" href="css/reviews.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <img id="brandLogo" class="logo" src="images/logo.png" alt="logo" />
+      <div>
+        <div id="brandName" class="brand-name">GHAZAL ROSE</div>
+        <div id="brandTagline" class="brand-tagline">Soft Luxury Makeup</div>
+      </div>
+    </div>
+
+    <div class="top-actions">
+      <select id="langSelect" class="select">
+        <option value="en">EN</option>
+        <option value="fr">FR</option>
+        <option value="ar">AR</option>
+      </select>
+
+      <button id="openCartBtn" class="btn btn-outline">
+        <span id="cartLabel">Cart</span>
+        <span class="badge" id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero card">
+      <div class="hero-left">
+        <h1 id="heroTitle">Glow with GHAZAL ROSE</h1>
+        <p id="heroDesc">Premium makeup & beauty packs. Pick products, build your cart, and order via WhatsApp.</p>
+        <div class="hero-cta">
+          <button id="scrollProducts" class="btn">Shop Now</button>
+          <a class="btn btn-outline" href="settings.html">Settings</a>
+        </div>
+        <div class="hero-meta">
+          <span class="pill">MAD</span>
+          <span class="pill" id="workingHoursPill">Working hours: 09:00 - 22:00</span>
+        </div>
+      </div>
+      <div class="hero-right">
+        <img id="bannerImg" class="banner" src="images/branding/banner.jpg" alt="banner"/>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2 id="catTitle">Categories</h2>
+        <div id="categories" class="tabs"></div>
+      </div>
+    </section>
+
+    <section class="section" id="productsSection">
+      <div class="section-head">
+        <h2 id="productsTitle">Products</h2>
+        <input id="searchInput" class="input" placeholder="Search products..." />
+      </div>
+      <div id="productsGrid" class="grid"></div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2 id="packsTitle">Packs</h2>
+        <div class="muted" id="packsHint">Packs can include multiple products + quantities.</div>
+      </div>
+      <div id="packsGrid" class="grid"></div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2 id="reviewsTitle">Reviews</h2>
+      </div>
+      <div class="reviews card">
+        <div class="reviews-form">
+          <input id="reviewName" class="input" placeholder="Your name" />
+          <select id="reviewStars" class="select">
+            <option value="5">★★★★★</option>
+            <option value="4">★★★★☆</option>
+            <option value="3">★★★☆☆</option>
+            <option value="2">★★☆☆☆</option>
+            <option value="1">★☆☆☆☆</option>
+          </select>
+          <textarea id="reviewText" class="textarea" placeholder="Write your review..."></textarea>
+          <button id="addReviewBtn" class="btn">Add review</button>
+        </div>
+        <div id="reviewsList" class="reviews-list"></div>
+      </div>
+    </section>
+
+    <footer class="footer muted">
+      <div>
+        <span id="footerBrand">GHAZAL ROSE</span> • <span id="footerCopy">All rights reserved</span>
+      </div>
+      <div class="footer-links">
+        <a href="login.html">Admin</a>
+        <a href="settings.html">Settings</a>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Cart Drawer -->
+  <div id="cartDrawer" class="drawer hidden" aria-hidden="true">
+    <div class="drawer-backdrop" id="drawerBackdrop"></div>
+    <div class="drawer-panel">
+      <div class="drawer-head">
+        <div class="drawer-title" id="drawerTitle">Cart</div>
+        <button class="icon-btn" id="closeCartBtn">✕</button>
+      </div>
+
+      <div id="cartLines" class="drawer-body"></div>
+
+      <div class="drawer-footer">
+        <div class="row">
+          <input id="customerName" class="input" placeholder="Your name" />
+          <input id="customerCity" class="input" placeholder="City" />
+        </div>
+        <div class="total">
+          <span id="totalLabel">Total</span>
+          <strong><span id="cartTotal">0</span> MAD</strong>
+        </div>
+        <a id="waCheckout" class="btn" href="#" target="_blank" rel="noreferrer">Checkout WhatsApp</a>
+        <button id="clearCart" class="btn btn-outline">Clear cart</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
